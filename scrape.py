@@ -6,7 +6,7 @@ def scrape_website(website):
     # to check if func is working
     print("Launching Chrome Browser...")
 
-    chrome_driver_path=""
+    chrome_driver_path="./chromedriver.exe"
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
 
@@ -15,7 +15,7 @@ def scrape_website(website):
         print("Page Loaded...")
         html = driver.page_source
         time.sleep(10)
-        
+
         return html
     finally:
         driver.quit()
