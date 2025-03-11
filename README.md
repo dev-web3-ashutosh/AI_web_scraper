@@ -1,2 +1,2 @@
 # AI_web_scraper
-Chat with extracted data from any website to get the most relevant data points for you. AI powered web scraping!
+Scrape any website and chat with extracted data and get ONLY the most relevant data points for you. AI powered web scraping!
