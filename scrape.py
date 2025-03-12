@@ -1,6 +1,7 @@
 import selenium.webdriver as webdriver
 from selenium.webdriver.chrome.service import Service
 import time
+from bs4 import BeautifulSoup
 
 def scrape_website(website):
     # to check if func is working
@@ -19,3 +20,6 @@ def scrape_website(website):
         return html
     finally:
         driver.quit()
+
+def extract_body_content(html_content):
+    soup = BeautifulSoup()
