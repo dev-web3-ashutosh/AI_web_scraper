@@ -15,7 +15,7 @@ def scrape_website(website):
         driver.get(website)
         print("Page Loaded...")
         html = driver.page_source
-        time.sleep(5)
+        time.sleep(3)
 
         return html
     finally:
@@ -34,7 +34,7 @@ def clean_body_content(body_content):
     for script_or_style in soup(["script", "style"]):
         script_or_style.extract()
 
-    cleaned_content = soup.get_text(seperator="\n")
+    cleaned_content = soup.get_text(separator="\n")
     cleaned_content = "\n".join(
         line.strip() for line in cleaned_content.splitlines() if line.strip()
     )

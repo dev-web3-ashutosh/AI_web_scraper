@@ -9,7 +9,9 @@ url = st.text_input("Enter a Website URL: ")
 
 # when the button "Scrape Site" is clicked
 if st.button("Scrape Site!"):
-    st.write("Scraping the website... A new window will open up, wait for it to close automatically.")
+    st.write("Scraping the website...")
+    st.write("A new window will open up, wait for it to close automatically.")
+    st.write("Please wait for website content to load below")
     
     # get html page source
     result = scrape_website(url)
