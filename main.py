@@ -10,6 +10,17 @@ url = st.text_input("Enter a Website URL: ")
 # when the button "Scrape Site" is clicked
 if st.button("Scrape Site!"):
     st.write("Scraping the website... A new window will open up, wait for it to close automatically.")
+    
+    # get html page source
     result = scrape_website(url)
+
+    # extract only the content in body tag
+    body_content = extract_body_content(result)
+
+    # clean the content to remove content in script and style tags
+    cleaned_content = clean_body_content(body_content)
+
+    
+
     print(result)
 
