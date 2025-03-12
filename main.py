@@ -4,6 +4,7 @@ from scrape import scrape_website, extract_body_content, clean_body_content, spl
 
 # main heading
 st.title("AI Web Scraper")
+st.write("Scrape any website and chat with extracted data and get ONLY the most relevant data points for you.")
 # insert a text input box
 url = st.text_input("Enter a Website URL: ")
 
