@@ -1,7 +1,6 @@
 import streamlit as st
 from scrape import scrape_website, extract_body_content, clean_body_content, split_dom_content
 
-
 # main heading
 st.title("AI Web Scraper")
 st.write("Scrape any website and chat with the extracted data to get ONLY the most relevant data points for you.")
@@ -36,8 +35,9 @@ if "dom_content" in st.session_state:
     if st.button("Parse Content"):
         if parse_description:
             st.write("Parsing content...")
-
+           
             dom_chunks = split_dom_content(st.session_state.dom_content)
+
 
 print("Done!")
 
